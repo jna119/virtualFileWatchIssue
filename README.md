@@ -12,7 +12,7 @@ Step to reproduce issue(MS Windows was used):
 - Execute command `Create Virtual File and Open`("memfs.init"). Command does following:
     - Command creates virtual file based on opened folder path by appending `dummy/subfolder/test.txt'`.
     - Command opens TextEditor for created virtual file .
-- Change content of file and save
+- Change content of `test.txt` file and save
 
 Problem, watcher triggers are not executed. Info message should appear if watcher triggers(`showInformationMessage` is used in watcher).
 Following watchers were used - https://github.com/815are/virtualFileWatchIssue/blob/main/src/extension.ts#L70-L77
