@@ -75,6 +75,10 @@ export function activate(context: vscode.ExtensionContext) {
 			sourceFileWatch2.onDidChange(() => {
 				vscode.window.showInformationMessage('File changed 2');
 			});
+			const sourceFileWatch3 = vscode.workspace.createFileSystemWatcher('**/*.txt');
+			sourceFileWatch3.onDidChange(() => {
+				vscode.window.showInformationMessage('File changed 3');
+			});
 
 			// Open newly created virtual file
 			await openTextDocument(fileUri);
